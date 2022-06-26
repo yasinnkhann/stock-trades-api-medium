@@ -4,7 +4,7 @@ const Trades = require('./models/trades');
 
 return sequelize
 	.authenticate()
-	.then(result => {
+	.then(() => {
 		console.log(`SQLite successfully connected!`);
 		return Trades.sync();
 	})

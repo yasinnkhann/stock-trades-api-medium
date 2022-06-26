@@ -1,5 +1,4 @@
 const express = require('express');
-const { type } = require('os');
 const router = express.Router();
 const TradeModel = require('../models/trades');
 
@@ -132,3 +131,26 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+/*
+  For two integers arrays, the comparator value is the total number of elements in the first array such that there exists no integer in the second array with an absolute difference less than or equal to d. Find the comparator value.
+
+  function comparatorValue(a, b, d) {
+    // Write your code here
+
+    let count = 0;
+    for (let i = 0; i < a.length; i++) {
+      let found = false;
+      for (let j = 0; j < b.length; j++) {
+        if (Math.abs(a[i] - b[j]) <= d) {
+          found = true;
+          break;
+  }
+      }
+      if (!found) {
+        count++;
+      }
+    }
+    return count;
+  }
+*/
